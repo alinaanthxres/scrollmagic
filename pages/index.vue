@@ -33,43 +33,57 @@
       </div>
     </div>
 
-      <div class="container3">
-        <h1 class="mundo">
-          ¿Cómo lo <br />
-          hemos vivido <br />
-          en todo el mundo?
-        </h1>
-        <img class="mundoimg" src="./img/2tierra.gif" alt="" />
-        <div class="subtitulo">
-          <h3 class="trastorno">
-            1.000.000.000 personas padecen un trastorno mental
-          </h3>
-          <h3 class="datos">Los últimos datos:</h3>
-        </div>
+    <div class="container3">
+      <h1 class="mundo">
+        ¿Cómo lo <br />
+        hemos vivido <br />
+        en todo el mundo?
+      </h1>
+      <img class="mundoimg" src="./img/2tierra.gif" alt="" />
+      <div class="subtitulo">
+        <h3 class="trastorno">
+          1.000.000.000 personas padecen un trastorno mental
+        </h3>
+        <h3 class="datos">Los últimos datos:</h3>
       </div>
-      
-      <div class="container4">
-        <div class="trastorno">
-          <h3 class="nombreTrastorno">Ansiedad</h3>
-          <h1 class="cifra">15%</h1>
-          <h3 class="datoTrastorno">3 veces más de lo habitual</h3>
-        </div>
-        <div class="trastorno">
-          <h3 class="nombreTrastorno">Depresión</h3>
-          <h1 class="cifra">16%</h1>
-          <h3 class="datoTrastorno">4 veces más de lo habitual</h3>
-        </div>
-        <div class="trastorno">
-          <h3 class="nombreTrastorno">Estrés Postraumático</h3>
-          <h1 class="cifra">22%</h1>
-          <h3 class="datoTrastorno">5 veces más de lo habitual</h3>
-        </div>
-        <div class="trastorno">
-          <h3 class="nombreTrastorno">Insomnio</h3>
-          <h1 class="cifra">24%</h1>
-        </div>
-      </div>
+    </div>
 
+    <div class="container4">
+      <h3 class="nombreTrastorno">Ansiedad</h3>
+      <div class="trastorno">
+        <h1 class="cifra">15%</h1>
+        <h3 class="datoTrastorno">3 veces más de lo habitual</h3>
+      </div>
+      <h3 class="nombreTrastorno">Depresión</h3>
+      <div class="trastorno">
+        <h1 class="cifra">16%</h1>
+        <h3 class="datoTrastorno">4 veces más de lo habitual</h3>
+      </div>
+      <h3 class="nombreTrastorno">Estrés Postraumático</h3>
+      <div class="trastorno">
+        <h1 class="cifra">22%</h1>
+        <h3 class="datoTrastorno">5 veces más de lo habitual</h3>
+      </div>
+      <h3 class="nombreTrastorno">Insomnio</h3>
+      <div class="trastorno">
+        <h1 class="cifra">24%</h1>
+      </div>
+    </div>
+
+
+    <div class="container5" id="trigger5">
+      <p class="oms">
+        OMS, 10/2020: Informa de que la crisis del COVID ha paralizado o
+        perturbado los servicios de salud mental críticos en el 93% de países
+        del mundo.
+      </p>
+    </div>
+
+    <div class="container6">
+      <h1 class="mundo">
+        ¿Y en España?
+      </h1>
+    </div>
 
     <div class="hola"></div>
   </div>
@@ -99,11 +113,15 @@ export default {
       //.setTween("#animate2", 0.5, {backgroundColor: "white"})
       .addTo(controller);
 
-
-    var backgroundSec3 = new this.$scrollmagic.Scene({triggerElement: ".mundoimg", duration: 500})
-      .setTween("#sec3", 3, {backgroundColor: "rgba(0, 19, 187, 1)"})
-      .addIndicators() // add indicators (requires plugin)
-      .addTo(controller);
+    var scene5 = new this.$scrollmagic.Scene({
+						triggerElement: "#trigger5",
+						triggerHook: 0.3, // show, when scrolled 10% into view
+						duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+						offset: 90 // move trigger to center of element
+		})
+			.setClassToggle(".oms", "visible") // add class to reveal
+			.addIndicators() // add indicators (requires plugin)
+			.addTo(controller);
   },
   methods: {
     hola() {
