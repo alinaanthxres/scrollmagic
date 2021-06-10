@@ -26,14 +26,17 @@
   }
 }
 
+.container2::-webkit-scrollbar {
+  display: none;
+  background: transparent;
+  width: 0;
+}
+
 .container2 {
+
   justify-content: left;
   align-items: left;
   overflow-x: scroll;
-
-  .container2::-webkit-scrollbar {
-    display: none;
-  }
 
   .causas {
     position: relative;
@@ -57,98 +60,193 @@
 }
 
 
-  .container3{
-    padding: 20em 0 0 2em;
+.container3 {
+  padding: 20em 0 0 2em;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  background: $greyback;
+
+  h1 {
+    font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
+    display: block;
+    font-weight: 500;
+    font-size: 105px;
+    color: $darkcolor;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+
+  .mundoimg {
+    width: 200px;
+    height: 200px;
+    margin-left: 4em;
+    align-self: center;
+  }
+
+  .subtitulo {
+    margin: 0em 0em 12em 6em;
+  }
+}
+
+.container4 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 3em;
+  color: white;
+  background: linear-gradient(180deg, rgba(196, 196, 196, 1) 0%, rgba(10, 28, 188, 1) 100%);
+
+  .nombretrastorno {
+    font-size: 36px;
+    padding: 0;
+  }
+
+  .trastorno {
     display: flex;
     flex-flow: row;
-    flex-wrap: wrap;
-    background: $greyback;
-  
-    h1 {
-      font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
-      display: block;
-      font-weight: 500;
-      font-size: 105px;
-      color: $darkcolor;
-      letter-spacing: 1px;
-      text-align: left;
-    }
-    .mundoimg{
-      width: 200px;
-      height: 200px;
-      margin-left: 4em;
-      align-self: center;
-    }
-    .subtitulo{
-      margin-bottom: 2em;
-    }
-  }  
-
-  .container4{
-    display: flex;
-    flex-flow: column;
     align-items: center;
-    padding-top: 3em;
-    color: white;
-    background: linear-gradient(180deg, rgba(196,196,196,1) 0%, rgba(10,28,188,1) 100%);
+    padding: 0 0 10em 0;
 
-    .nombretrastorno{
-      font-size: 36px;
+    .cifra {
+      font-size: 288px;
       padding: 0;
-      margin: 0;
-    }
-
-    .trastorno{
-      text-align: center;
-      display: flex;
-      flex-flow: row;
-      align-items: center;
-      padding: 0 0 4em 0;
-
-      .cifra{
-        font-size: 288px;
-        padding: 0;
-        font-weight: 400;
-        line-height: 330px;
-        
-      }
-      .datoTrastorno{
-        width: 50px;
-        text-align: left;
-        padding-left: 2em;
-      }
-
-
-    }
-  }
-
-  .container5{
-    padding: 8em 0em 8em 3em;
-    background-color: rgba(10, 28, 188, 1);
-    .oms{
-      color: white;
-      font-size: 36px;
       font-weight: 400;
-      opacity: 0;
-      -webkit-transition: all 1s ease-in-out;
-         -moz-transition: all 1s ease-in-out;
-          -ms-transition: all 1s ease-in-out;
-           -o-transition: all 1s ease-in-out;
-              transition: all 1s ease-in-out;
+      line-height: 330px;
+
     }
-    .oms.visible {
-      opacity: 1;
-      -webkit-transform: none;
-         -moz-transform: none;
-          -ms-transform: none;
-           -o-transform: none;
-              transform: none;
+
+    .datoTrastorno {
+      width: 50px;
+      text-align: left;
+      padding-left: 2em;
+    }
+
+
+  }
+}
+
+.container5 {
+  padding: 16em 0em 8em 3em;
+  background-color: rgba(10, 28, 188, 1);
+  overflow-x: hidden;
+
+  .oms {
+    color: white;
+    font-size: 36px;
+    font-weight: 400;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+
+  .oms.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+}
+
+.container6 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 3em;
+  color: white;
+  background: linear-gradient(180deg, rgba(10, 28, 188, 1) 0%, rgba(143, 240, 255, 1) 100%);
+  overflow-x: hidden;
+
+  .tit_españa {
+    font-weight: 500;
+    font-size: 250px;
+    letter-spacing: 1px;
+    margin: 2em 0em 1.5em 0.3em;
+  }
+
+  .nombreTrastorno {
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .trastorno {
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding: 0 0 12em 0;
+
+    .cifra {
+      font-size: 288px;
+      padding: 0;
+      font-weight: 400;
+      line-height: 330px;
+
+    }
+
+    .larga {
+      font-size: 230px;
+    }
+
+    .datoTrastorno {
+      width: 160px;
+      text-align: left;
+      padding-left: 2em;
     }
   }
 
-  .container6{
-    background: linear-gradient(180deg, rgba(10,28,188,1) 0%, rgba(143,240,255,1) 100%);
+  
+  .hospiDelMar {
+    display: flex;
+    flex-flow: row wrap;
+    width: 800px;
+    justify-self: center;
+    padding: 4em 0 10em 0;
+    justify-content: flex-end;
 
+    .hospiMarImg {
+      width: 330px;
+      height: 250px;
+    }
+    
+    p {
+      padding: 0 0 0 1em;
+      color: $darkcolor;
+      font-weight: 600;
+      font-size: 1.1em;
+      width: 400px;
+    }
+
+    .cita {
+      font-weight: 300;
+      width: max-content;
+      align-self: flex-end;
+      padding-top: 1em;
+    }
+  }
+}
+
+.container7 {
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(142, 241, 255, 1) 20%, rgba(255, 255, 255, 1) 100%);
+  display: flex;
+
+  h1 {
+    font-weight: 500;
+    font-size: 200px;
+    letter-spacing: 1px;
+    margin: 0em 0em 0em 0.3em;
   }
 
+  .flechaDrcha{
+    width: fit-content;
+    height: min-content;
+  }
 
+}

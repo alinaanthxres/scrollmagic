@@ -4,7 +4,7 @@ import * as ScrollMagic from 'scrollmagic';
 // import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 //import 'imports-loader?imports=scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 import { ScrollMagicPluginIndicator} from "scrollmagic-plugins";
-import { TweenMax, TimelineMax } from "gsap";
+import { TweenMax, TimelineMax,  } from "gsap";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugins";
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);

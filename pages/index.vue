@@ -1,3 +1,5 @@
+
+
 <template>
   <div>
     <div class="intro_1">
@@ -70,7 +72,6 @@
       </div>
     </div>
 
-
     <div class="container5" id="trigger5">
       <p class="oms">
         OMS, 10/2020: Informa de que la crisis del COVID ha paralizado o
@@ -80,9 +81,58 @@
     </div>
 
     <div class="container6">
-      <h1 class="mundo">
-        ¿Y en España?
-      </h1>
+      <h1 class="tit_españa">¿Y en España?</h1>
+
+      <h3 class="nombreTrastorno">Ansiedad</h3>
+      <div class="trastorno">
+        <h1 class="cifra">6,7%</h1>
+      </div>
+      <h3 class="nombreTrastorno">Depresión</h3>
+      <div class="trastorno">
+        <h1 class="cifra">6,7%</h1>
+        <h3 class="datoTrastorno">
+          En 2050 será el principal problema de salud.
+        </h3>
+      </div>
+      <h3 class="nombreTrastorno">Problemas de sueño</h3>
+      <div class="trastorno">
+        <h1 class="cifra">41,9%</h1>
+        <h3 class="datoTrastorno">5 veces más de lo habitual</h3>
+      </div>
+      <h3 class="nombreTrastorno">Suicidios</h3>
+      <div class="trastorno">
+        <h1 class="cifra">24%</h1>
+        <h3 class="datoTrastorno">
+          Aumentó un 50% más de consultas sobre suicidios a los teléfonos de la
+          esperanza
+        </h3>
+      </div>
+      <h3 class="nombreTrastorno">Personas con trastornos mentales graves</h3>
+      <div class="trastorno">
+        <h1 class="cifra larga">1.000.000</h1>
+      </div>
+
+      
+      <div class="hospiDelMar">
+        <img class="hospiMarImg" src="./img/3hospitalMar.jpg" alt="" />
+        <p class="delMarText">
+          Las personas que han sufrido trastornos mentales previos a la
+          pandemia, los sanitarios que han estado más expuestos a la covid, los
+          profesionales que se infectaron o tuvieron que hacer cuarentena y las
+          auxiliares de enfermería son los colectivos de mayor riesgo y deben
+          considerarse “grupos que necesitan seguimiento y apoyo a su salud
+          mental”.
+        </p>
+        <p class="cita">-Hospital del Mar de Barcelona</p>
+      </div>
+    </div>
+
+    <div class="container7">
+      <div class="slides">
+        <h1>Los más vulnerables</h1>
+        <img class="flechaDrcha" src="./img/7flechadrcha.png" alt="" />
+        <h2>Los sanitarios</h2>
+      </div>
     </div>
 
     <div class="hola"></div>
@@ -106,23 +156,36 @@ export default {
       triggerElement: ".mundoimg",
       duration: 350,
     })
-      // trigger a TweenMax.to tween
       .setPin(".mundoimg")
-      // add indicators (requires plugin)
-      //.addIndicators({name: "1 (duration: 300)"})
-      //.setTween("#animate2", 0.5, {backgroundColor: "white"})
       .addTo(controller);
 
     var scene5 = new this.$scrollmagic.Scene({
-						triggerElement: "#trigger5",
-						triggerHook: 0.3, // show, when scrolled 10% into view
-						duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
-						offset: 90 // move trigger to center of element
-		})
-			.setClassToggle(".oms", "visible") // add class to reveal
-			.addIndicators() // add indicators (requires plugin)
-			.addTo(controller);
+      triggerElement: "#trigger5",
+      triggerHook: 0.3, // show, when scrolled 10% into view
+      duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 90, // move trigger to center of element
+    })
+      .setClassToggle(".oms", "visible") // add class to reveal
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
+
+    var scene7 = new this.$scrollmagic.Scene({
+      triggerElement: ".hospiMarImg",
+      duration: 500,
+      offset: 250,
+    })
+      .setPin(".hospiMarImg")
+      .addTo(controller);
+
+    var scene8 = new this.$scrollmagic.Scene({
+      triggerElement: ".delMarText",
+      duration: 500,
+      offset: 170,
+    })
+      .setPin(".delMarText")
+      .addTo(controller);
   },
+
   methods: {
     hola() {
       alert("hola");
